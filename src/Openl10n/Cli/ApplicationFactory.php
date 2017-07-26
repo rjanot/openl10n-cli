@@ -28,7 +28,7 @@ class ApplicationFactory
         $extensionManager = $this->createExtensionManager();
         $eventDispatcher = $this->createEventDispatcher();
 
-        $eventDispatcher->addSubscriber(new WorkingDirectoryListener($configurationLoader));
+//        $eventDispatcher->addSubscriber(new WorkingDirectoryListener($configurationLoader));
 
         $application = new Application(self::NAME, self::VERSION, $configurationLoader, $extensionManager);
         $application->addCommands($this->getDefaultCommands());
